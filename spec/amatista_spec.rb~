@@ -4,14 +4,19 @@
 describe Amatista do
  before :each do
 
-	@fraccion = Fraccion.new(2,4) 
+	@fraccion1 = Amatista::Fraccion.new(2,4)
+        @fraccion2 = Amatista::Fraccion.new(1,2) 
   end
 
  describe " Expectativas Clase Fracción" do
 
 	it " Expectativa Instacia Fraccion " do
-	   expect(@fraccion).to be_truthy
+	   expect(@fraccion1).to be_truthy
 	end 
+        
+        it " Expectativa atributos clase Fraccion" do 
+	    
+	end
  end
 
 end
