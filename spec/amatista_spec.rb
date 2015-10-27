@@ -4,7 +4,7 @@
 describe Amatista do
  before :each do
 
-	@fraccion = Fraccion.new 
+	@fraccion = Amatista::Fraccion.new(2,4) 
   end
 
  describe " Expectativas Clase Fracción" do
