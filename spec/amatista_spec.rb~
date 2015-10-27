@@ -6,6 +6,7 @@ describe Amatista do
 
 	@fraccion1 = Amatista::Fraccion.new(2,4)
         @fraccion2 = Amatista::Fraccion.new(1,2) 
+	@fraccion1.print	
   end
 
  describe " Expectativas Clase Fracción" do
@@ -16,8 +17,12 @@ describe Amatista do
         
         it " Expectativa acceso atributos de la clase Fraccion" do 
 	    expect(@fraccion1).to be_instance_of(Amatista::Fraccion)
-            expect(@fraccion1).to respond_to(numerador)
+            expect(@fraccion1).to respond_to(:numerador)
+	    expect(@fraccion1).to respond_to(:denominador)
 	   
+	end
+	it " Expectativa mostrar fracción " do 
+	    expect(@fraccion1).to respond_to(:print)		
 	end
  end
 
