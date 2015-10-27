@@ -17,7 +17,7 @@ describe Amatista do
         it " Expectativa acceso atributos de la clase Fraccion" do 
 	    expect(@fraccion1).to be_instance_of(Amatista::Fraccion)
             expect(@fraccion1).to respond_to(:numerador)
-	    expect(@fraccion1).to respond_to(:denominador)
+	   
 	end
  end
 

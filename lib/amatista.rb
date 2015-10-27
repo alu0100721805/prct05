@@ -10,6 +10,6 @@ module Amatista
 	       @numerador = numerador
 	       @denominador = denominador
 	   end	
-	  
+	   attr_reader :numerador, :denominador
    end
 end
