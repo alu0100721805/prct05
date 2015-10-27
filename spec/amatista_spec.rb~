@@ -1,0 +1,18 @@
+ require 'spec_helper'
+ require "amatista.rb"
+
+describe Amatista do
+ before :each do
+
+	@fraccion = Fraccion.new 
+  end
+
+ describe " Expectativas Clase Fracción" do
+
+	it " Expectativa Instacia Fraccion " do
+	   expect(@fraccion).to be_truthy
+	end 
+ end
+
+end
+
