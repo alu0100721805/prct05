@@ -11,5 +11,9 @@ module Amatista
 	       @denominador = denominador
 	   end	
 	   attr_reader :numerador, :denominador
+	   def print()
+		puts @numerador.to_s << "/" << @denominador.to_s 
+	   end
    end
 end
+
