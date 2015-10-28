@@ -11,6 +11,7 @@ describe Amatista do
 	(@fraccion1 + @fraccion2).print
 	(@fraccion1 * @fraccion2).print
 	(@fraccion1 - @fraccion2).print
+	(@fraccion1 / @fraccion2).print
 		
   end
 
