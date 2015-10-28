@@ -10,7 +10,10 @@ describe Amatista do
 	puts  @fraccion1.to_s << " - "  << @fraccion2.to_s << " == (" << (@fraccion1 - @fraccion2).to_s << ")" 
 	puts  @fraccion1.to_s << " * "  << @fraccion2.to_s << " == (" << (@fraccion1 * @fraccion2).to_s << ")" 
 	puts  @fraccion1.to_s << " : "  << @fraccion2.to_s << " == (" << (@fraccion1 / @fraccion2).to_s << ")"  
-
+	@solucion1 = Amatista::Fraccion.new(-23,42)
+	@solucion2 = Amatista::Fraccion.new(-47,42)
+	@solucion3 = Amatista::Fraccion.new(-5,21)
+	@solucion4 = Amatista::Fraccion.new(-35,12)
 		
   end
 
@@ -43,6 +46,12 @@ describe Amatista do
 	end
 	it " Expectativa simplificar fracción " do
 	   expect(@fraccion1).to respond_to(:simplificar)
+	end
+	it " Expectativas verificar los valores de las operaciones " do
+	   expect(@fraccion1 + @fraccion2).to be_eq(@solucion1)
+           expect(@fraccion1 - @fraccion2).to be_eq(@solucion2)
+	   expect(@fraccion1 * @fraccion2).to be_eq(@solucion3)
+	   expect(@fraccion1 / @fraccion2).to be_eq(@solucion4)
 	end
 	
  end
