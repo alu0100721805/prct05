@@ -4,14 +4,13 @@
 describe Amatista do
  before(:all) do
 
-	@fraccion1 = Amatista::Fraccion.new(-2,4)
-        @fraccion2 = Amatista::Fraccion.new(-1,2) 
-	@fraccion1.print
-	@fraccion2.print
-	(@fraccion1 + @fraccion2).print
-	(@fraccion1 * @fraccion2).print
-	(@fraccion1 - @fraccion2).print
-	(@fraccion1 / @fraccion2).print
+	@fraccion1 = Amatista::Fraccion.new(-50,60)
+        @fraccion2 = Amatista::Fraccion.new(2,7) 	
+	puts  @fraccion1.to_s << " + "  << @fraccion2.to_s << " == (" << (@fraccion1 + @fraccion2).to_s << ")" 
+	puts  @fraccion1.to_s << " - "  << @fraccion2.to_s << " == (" << (@fraccion1 - @fraccion2).to_s << ")" 
+	puts  @fraccion1.to_s << " * "  << @fraccion2.to_s << " == (" << (@fraccion1 * @fraccion2).to_s << ")" 
+	puts  @fraccion1.to_s << " : "  << @fraccion2.to_s << " == (" << (@fraccion1 / @fraccion2).to_s << ")"  
+
 		
   end
 
@@ -28,7 +27,7 @@ describe Amatista do
 	   
 	end
 	it " Expectativa mostrar fracción " do 
-	    expect(@fraccion1).to respond_to(:print)		
+	    expect(@fraccion1).to respond_to(:to_s)		
 	end
 	it " Expectativa sumar fracción " do 
 	   expect(@fraccion1).to respond_to(:+) 

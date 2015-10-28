@@ -14,15 +14,15 @@ module Amatista
 	       @denominador = denominador
 	   end	
 	   attr_reader :numerador, :denominador
-	   def print()
+	   def to_s
 		if (@numerador % @denominador != 0) then
 			if (@numerador < 0 && @denominador < 0)
 				@numerador = (-1)*@numerador
 				@denominador = (-1)*@denominador	
 			end		
-			puts @numerador.to_s << "/" << @denominador.to_s 
+			 @numerador.to_s << "/" << @denominador.to_s 
 		else
-			puts (@numerador / @denominador).to_s
+			(@numerador / @denominador).to_s
 		end
 	   end
 	   def +(fraccion)
@@ -33,6 +33,7 @@ module Amatista
 	       b = self.denominador * fraccion.denominador
 	       a =  self.numerador * fraccion.denominador  + fraccion.numerador * self.denominador
 	       fnueva = Amatista::Fraccion.new(a,b)
+	       fnueva.simplificar
 	   end
 	   def *(fraccion)
 	       #fraccion a multiplicar
@@ -41,7 +42,7 @@ module Amatista
 		a = self.numerador * fraccion.numerador 
 		b = self.denominador * fraccion.denominador
 		fnueva = Amatista::Fraccion.new(a,b)
-
+		fnueva.simplificar
 	   end
 	    def -(fraccion)
 	       #fracción a Restar
@@ -51,6 +52,7 @@ module Amatista
 	       b = self.denominador * fraccion.denominador
 	       a =  self.numerador * fraccion.denominador  - fraccion.numerador * self.denominador
 	       fnueva = Amatista::Fraccion.new(a,b)
+               fnueva.simplificar
 	   end
 	   def /(fraccion)
 	       #fraccion a multiplicar
@@ -59,10 +61,43 @@ module Amatista
 		a = self.numerador * fraccion.denominador
 		b = self.denominador * fraccion.numerador
 		fnueva = Amatista::Fraccion.new(a,b)
-
+		fnueva.simplificar
 	   end
-	  
-	
+	   def simplificar()
+		raise ArgumentError,'Argumento "fraccion" no debe ser "nulo"' unless self !=nil
+	       raise ArgumentError,'Argumento "fraccion" no es del tipo Amatista::Fraccion"' unless self.is_a? Amatista::Fraccion	
+		a = self.numerador
+		b = self.denominador
+		# Valor absoluto para ambos parámetros
+		if (a < 0) 
+			a= (-1)*a
+		end 
+		if (b < 0)
+			b = (-1)*b
+		end
+		# Se aplica algoritmo de euclides para ello se calcula qué parámetro es el mayor y el menor
+		if (a < b)
+			aux= a
+			a = b
+			b = aux 
+		end
+		#Algoritmo maximo común divisor
+		  resto = a%b
+		 while(resto > 0) do
+		 	a = b
+			b = resto
+			resto = a % b
+		 end
+		 maxcomdiv = b
+		 if(maxcomdiv != 0)
+	 	 	a = (self.numerador / maxcomdiv)
+		 	b = (self.denominador / maxcomdiv)
+	      	 	@numerador = a
+		 	@denominador = b
+          	  end
+		 self
+	   end	  
+	   
    end
 end
 
