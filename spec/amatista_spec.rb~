@@ -4,12 +4,13 @@
 describe Amatista do
  before(:all) do
 
-	@fraccion1 = Amatista::Fraccion.new(2,4)
-        @fraccion2 = Amatista::Fraccion.new(1,2) 
+	@fraccion1 = Amatista::Fraccion.new(-2,4)
+        @fraccion2 = Amatista::Fraccion.new(-1,2) 
 	@fraccion1.print
 	@fraccion2.print
 	(@fraccion1 + @fraccion2).print
 	(@fraccion1 * @fraccion2).print
+	(@fraccion1 - @fraccion2).print
 		
   end
 
@@ -37,6 +38,10 @@ describe Amatista do
 	it " Expectativa restar fraccion " do
 	    expect(@fraccion1).to respond_to(:-)
 	end
+	it " Expectativa dividir fraccion " do
+	    expect(@fraccion1).to respond_to(:/)
+	end
+
 	
  end
 
