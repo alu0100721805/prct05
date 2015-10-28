@@ -25,7 +25,13 @@ Or install it yourself as:
 ## Usage 
  Example : 
 
-
+	 @fraccion1 = Amatista::Fraccion.new(1,2) 
+	 @fraccion2 = Amatista::Fraccion.new(1,2) 
+	 @fraccion1 + @fraccion2
+	 @fraccion1 - @fraccion2
+	 @fraccion1 * @fraccion2
+	 @fraccion1 / @fraccion2
+	 puts @fraccion1
 
 ## Development
 
@@ -35,7 +41,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com/[]/amatista/fork )
+1. Fork it ( https://github.com//amatista/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

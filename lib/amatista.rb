@@ -1,4 +1,4 @@
-require "amatista/version"
+require 'lib/amatista/version.rb'
 
 module Amatista
    class Fraccion
@@ -76,7 +76,7 @@ module Amatista
 		if (b < 0)
 			b = (-1)*b
 		end
-		# Se aplica algoritmo de euclides para ello se calcula qué parámetro es el mayor y el menor
+		
 		if (a < b)
 			aux= a
 			a = b
