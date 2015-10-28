@@ -30,6 +30,14 @@ module Amatista
 	       a =  self.numerador * fraccion.denominador  + fraccion.numerador * self.denominador
 	       fnueva = Amatista::Fraccion.new(a,b)
 	   end
+	   def *(fraccion)
+               raise ArgumentError,'Argumento "fraccion" no debe ser "nulo"' unless fraccion != nil
+	       raise ArgumentError,'Argumento "fraccion" no es del tipo Amatista::Fraccion"' unless fraccion.is_a? Amatista::Fraccion
+		a = self.numerador * fraccion.numerador 
+		b = self.denominador * fraccion.denominador
+		fnueva = Amatista::Fraccion.new(a,b)
+
+	   end
 	   
    end
 end
