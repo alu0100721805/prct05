@@ -61,6 +61,8 @@ module Amatista
 		fnueva = Amatista::Fraccion.new(a,b)
 
 	   end
+	  
+	
    end
 end
 

@@ -33,16 +33,18 @@ describe Amatista do
 	it " Expectativa sumar fracción " do 
 	   expect(@fraccion1).to respond_to(:+) 
 	end
-	it " Expectativa multiplicar fraccion " do 
+	it " Expectativa multiplicar fracción " do 
 	    expect(@fraccion1).to respond_to(:*)
 	end 
-	it " Expectativa restar fraccion " do
+	it " Expectativa restar fracción " do
 	    expect(@fraccion1).to respond_to(:-)
 	end
-	it " Expectativa dividir fraccion " do
+	it " Expectativa dividir fracción " do
 	    expect(@fraccion1).to respond_to(:/)
 	end
-
+	it " Expectativa simplificar fracción " do
+	   expect(@fraccion1).to respond_to(:simplificar)
+	end
 	
  end
 
