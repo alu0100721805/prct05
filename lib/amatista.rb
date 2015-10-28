@@ -14,6 +14,7 @@ module Amatista
 	   def print()
 		puts @numerador.to_s << "/" << @denominador.to_s 
 	   end
+	   
    end
 end
 

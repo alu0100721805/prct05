@@ -2,11 +2,13 @@
  require "amatista.rb"
 
 describe Amatista do
- before(:all) do
+ before(:each) do
 
 	@fraccion1 = Amatista::Fraccion.new(2,4)
         @fraccion2 = Amatista::Fraccion.new(1,2) 
-	@fraccion1.print	
+	@fraccion1.print
+	@fraccion2.print
+		
   end
 
  describe " Expectativas Clase Fracción" do
@@ -24,6 +26,9 @@ describe Amatista do
 	it " Expectativa mostrar fracción " do 
 	    expect(@fraccion1).to respond_to(:print)		
 	end
+	it " Expectativa sumar fracción " do 
+	   expect(@fraccion1).to respond_to(:+)
+	end 
  end
 
 end
