@@ -34,6 +34,9 @@ describe Amatista do
 	it " Expectativa multiplicar fraccion " do 
 	    expect(@fraccion1).to respond_to(:*)
 	end 
+	it " Expectativa restar fraccion " do
+	    expect(@fraccion1).to respond_to(:-)
+	end
 	
  end
 

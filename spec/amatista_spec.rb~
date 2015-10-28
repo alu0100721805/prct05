@@ -9,7 +9,7 @@ describe Amatista do
 	@fraccion1.print
 	@fraccion2.print
 	(@fraccion1 + @fraccion2).print
-	(@fraccion1 * @fraccion3).print
+	(@fraccion1 * @fraccion2).print
 		
   end
 
@@ -34,6 +34,9 @@ describe Amatista do
 	it " Expectativa multiplicar fraccion " do 
 	    expect(@fraccion1).to respond_to(:*)
 	end 
+	it " Expectativa restar fraccion " do
+	    expect(@fraccion1).to respond_to(:-)
+	end
 	
  end
 
