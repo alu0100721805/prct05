@@ -48,10 +48,10 @@ describe Amatista do
 	   expect(@fraccion1).to respond_to(:simplificar)
 	end
 	it " Expectativas verificar los valores de las operaciones " do
-	   expect(@fraccion1 + @fraccion2).to be_eq(@solucion1)
-           expect(@fraccion1 - @fraccion2).to be_eq(@solucion2)
-	   expect(@fraccion1 * @fraccion2).to be_eq(@solucion3)
-	   expect(@fraccion1 / @fraccion2).to be_eq(@solucion4)
+	   expect(@fraccion1 + @fraccion2).to eq(@solucion1)
+           expect(@fraccion1 - @fraccion2).to eq(@solucion2)
+	   expect(@fraccion1 * @fraccion2).to eq(@solucion3)
+	   expect(@fraccion1 / @fraccion2).to eq(@solucion4)
 	end
 	
  end

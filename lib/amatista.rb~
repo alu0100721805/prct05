@@ -3,6 +3,7 @@ require "amatista/version"
 module Amatista
    class Fraccion
   	 # Método inicializar clase Fracción
+	 include Comparable
 	   def initialize(numerador, denominador) 
 		#atributos
 	       raise ArgumentError,'Argumento "numerador" no es del tipo entero"' unless numerador.is_a? Integer
@@ -96,6 +97,13 @@ module Amatista
 		 	@denominador = b
           	  end
 		 self
+	   end
+	    # El siguiente método se implementa para que la clase sepa compararse con una instacia de su misma clase
+	   def <=> (fraccion)
+		
+	       raise ArgumentError,'Argumento "fraccion" no debe ser "nulo"' unless fraccion != nil
+	       raise ArgumentError,'Argumento "fraccion" no es del tipo Amatista::Fraccion"' unless fraccion.is_a? Amatista::Fraccion
+	       (@numerador / @denominador) <=> (fraccion.numerador / fraccion.denominador)
 	   end	  
 	   
    end
