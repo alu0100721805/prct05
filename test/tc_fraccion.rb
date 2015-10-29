@@ -20,9 +20,16 @@ class TestFraccion < Test::Unit::TestCase
 	assert_equal( (@fraccion3 * @fraccion2).to_s, "1/2")
   end
   def test_type_check
- 
+ 	assert_kind_of(Amatista::Fraccion,@fraccion1)
+	assert_instance_of(Amatista::Fraccion,@fraccion1)
+	assert_kind_of(Numeric,@fraccion1.numerador)
+        assert_kind_of(Numeric,@fraccion1.denominador)
+	assert_instance_of(Fixnum,@fraccion1.numerador)
+	assert_instance_of(Fixnum,@fraccion1.denominador)
+	assert_kind_of(Amatista::Fraccion,(@fraccion1 + @fraccion2))
+	assert_instance_of(Amatista::Fraccion,(@fraccion1 + @fraccion2))
   end
   def test_failure
-
+	
   end
 end
