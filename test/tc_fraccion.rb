@@ -30,6 +30,12 @@ class TestFraccion < Test::Unit::TestCase
 	assert_instance_of(Amatista::Fraccion,(@fraccion1 + @fraccion2))
   end
   def test_failure
+	assert_raise ZeroDivisionError do
+	 fraccionerr = Amatista::Fraccion.new(1,0) 
+	end
+	 assert_raise ArgumentError do
+	    fraccionerr = Amatista::Fraccion.new(1,nil) 
+	end
 	
   end
 end
