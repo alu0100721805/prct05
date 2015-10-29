@@ -1,7 +1,7 @@
 #Lenguajes y Paradigmas de programación curso 2015-2016
 
 ##  Número de grupo LPP_43 
-### Práctica de Laboratorio #5. TDD creación de una clase Fracción en Ruby
+### Práctica de Laboratorio #5. Creación de una clase Fracción en Ruby con Test Units (se sigue la metodología TDD)
 
 ### Amatista
 La siguiente gema contiene los métodos esenciales para las operaciones aritméticas de fracciones
@@ -41,7 +41,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com//amatista/fork )
+1. Fork it (https://github.com/alu0100721805/prct05.git)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
